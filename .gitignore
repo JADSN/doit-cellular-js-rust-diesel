@@ -1,0 +1,7 @@
+**/tmp/
+**/prod/
+**/dist/
+
+/target
+*.sqlite3
+

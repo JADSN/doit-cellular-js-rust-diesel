@@ -1,0 +1,28 @@
+[package]
+name = "www"
+version = "0.2.0"
+authors = ["JADSN <jadsn1894@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+tide = { version = "0.15.0" }
+async-std = { version = "1.7.0" }
+serde = { version = "1.0.117", features = ["derive"]}
+
+[dependencies.auth]
+path = "../auth"
+
+[dependencies.db]
+path = "../db"
+
+[dependencies.error_handling]
+path = "../error_handling"
+
+[dependencies.shared]
+path = "../shared"
+
+[dependencies.validator]
+path = "../validator"
+
+[dependencies.utils]
+path = "../utils"

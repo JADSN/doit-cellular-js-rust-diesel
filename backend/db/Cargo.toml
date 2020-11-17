@@ -1,0 +1,21 @@
+[package]
+name = "db"
+version = "0.2.0"
+authors = ["JADSN <jadsn1894@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+diesel = { version = "1.4.5", features = ["sqlite"] }
+serde = { version = "1.0.117", features = ["derive"]}
+
+# r2d2 = '0.8.9'
+# r2d2_sqlite = '0.17.0'
+
+[dependencies.error_handling]
+path = "../error_handling"
+
+[dependencies.auth]
+path = "../auth"
+
+[dependencies.shared]
+path = "../shared"

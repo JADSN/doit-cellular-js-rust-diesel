@@ -1,0 +1,517 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+/* BEGIN SETUP */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Roboto', serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-color: black;
+}
+
+ul {
+	overflow-y: scroll;
+	padding: 10px;
+	height: 350px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 9fr 1fr;
+    grid-template-areas:
+      "topheader"
+      "middlebody"
+      "bottomfooter";
+
+}
+
+label {
+    font-weight: bolder;
+    margin-bottom: 2px;
+}
+
+input {
+    padding: 5px;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+input::placeholder {
+    color: rgb(36, 36, 36);
+}
+
+input, button {
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: black;
+}
+
+/* END SETUP */
+
+
+/* NAV BAR */
+
+.div-navbar {
+    grid-area: topheader;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 1fr;
+    border-bottom: 2px solid;
+}
+
+.span-doit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* MAIN CONTENT */
+
+.div-main-content {
+    grid-area: middlebody;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* BEGIN ABOUT */
+
+.img-me {
+    border-radius: 50%;
+}
+
+.img-me-brightness { 
+    filter: brightness(0.0); 
+}
+
+.about-identifier {
+    margin-top: 10px;
+}
+
+span.about-span-task-manager {
+	font-size: xxx-large;
+	text-align: center;
+}
+
+/* END ABOUT */
+
+/* BEGIN RELEASES */
+
+.content > div {
+    margin-bottom: 3px;
+}
+
+
+div.changelog > ul > li {
+    margin-bottom: 15px;
+    /* display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr; */
+}
+
+.changelog-status-added {
+    background-color: #32d296;
+    padding: 3px;
+    padding-left: 6px;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 120px;
+}
+
+.changelog-status-changed {
+    background-color: #1e87f0;
+    padding: 3px;
+    padding-left: 6px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.changelog-status-fixed {
+    background-color: #f0506e;
+    padding: 3px;
+    padding-left: 6px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.changelog-status-deprecated {
+    background-color: #faa05a;
+    padding: 3px;
+    padding-left: 6px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.changelog-item{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.changelog-description {
+    word-wrap: break-word;
+}
+
+
+/* END RELEASES*/
+
+/* BEGIN FOOTER */
+
+.div-footer {
+    grid-area: bottomfooter;
+}
+
+.copyright {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-top: 2px solid;
+}
+
+/* END FOOTER */
+
+/* UTILS */
+
+/*Filter styles*/
+/* .saturate { filter: saturate(3); }
+.grayscale { filter: grayscale(100%); }
+.contrast { filter: contrast(0%); }
+.brightness { filter: brightness(0.0); }
+.blur { filter: blur(3px); }
+.invert { filter: invert(100%); }
+.sepia { filter: sepia(100%); }
+.huerotate { filter: hue-rotate(180deg); }
+.rss.opacity { filter: opacity(50%); } 
+*/
+
+/* Center elements */
+
+/*.center {
+    margin:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}*/
+
+
+
+/* FRONT END V1 */
+
+
+.div-sign-in {
+    display: flex;
+    flex-direction: column;
+}
+
+
+span.span-msg {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+span.error-msg {
+    color: red;
+}
+
+span.ok-msg {
+    color: green;
+}
+
+/* END SETUP */
+
+/* BEGIN SIGN IN/UP */
+
+.div-inp-msg {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-inp-and-msg > h6 {
+    color: red;
+    text-transform: uppercase;
+}
+
+input#inp-login {
+	margin-right: 10px;
+}
+
+.span-login {
+    font-weight: bold;
+    color: black;
+    font-size: x-large;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#inp-login-username {
+    margin-bottom: 10px;
+}
+
+.btn-sign-in, .btn-sign-up{
+    font-weight: bold;
+    font-size: large;
+    margin-top: 10px;
+    background-color: transparent;
+    width: 150px;
+}
+
+#btn-sign-in:focus{
+    outline: none;
+}
+
+/* END SIGN IN/UP */
+
+/* BEGIN ALL TASKS */
+
+.div-entryponint-task {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 100%;
+}
+
+.div-counter {
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+}
+
+.div-add-task {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 10px;
+}
+
+.btn-edit, .btn-delete, .btn-task-add {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(194, 194, 194);
+}
+
+ul > li {
+    display: grid;
+    grid-template-columns: 2fr 0.2fr 2fr 2fr;
+    grid-template-rows: 1fr;
+    column-gap: 5px;
+    grid-template-areas:
+    "taskinpdesc taskcbdone btnedit btndelete";
+}
+
+li:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+.task-inp-desc {
+    grid-area: taskinpdesc;
+}
+
+.task-cb-done {
+    grid-area: taskcbdone;
+}
+
+.btn-edit {
+    grid-area: btnedit;
+}
+
+.btn-delete {
+    grid-area: btndelete;
+}
+
+
+/* CURSTOM CHECKBOX */
+
+.cb-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.cb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-color: black;
+    border: dashed;
+    border-width: 2px;
+}
+
+/* On mouse-over, add a black background color */
+.cb-container:hover input ~ .cb {
+    background-color: transparent;
+}
+
+/* On mouse-over, add a black background color */
+.cb-container input ~ .cb {
+    background-color: transparent;
+}
+
+/* When the checkbox is checked, add a transparent background */
+.cb-container input:checked ~ .cb {
+    background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.cb:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.cb-container input:checked ~ .cb:after {
+    display: block;
+    background-color: transparent;
+}
+
+/* Style the checkmark/indicator */
+.cb-container .cb:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* END ALL TASKS*/
+
+/* BEGIN TOOLTIP*/
+
+div#div-tooltip-entrypoint {
+    display: initial;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -20px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+.#inp-login-password:focus span.tooltiptext {
+  visibility: visible;
+}
+
+/* END TOOLTIP*/
+
+/* START SCROLLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border: 2px dashed;
+  /* background-color: transparent; */
+  /* padding: 10px; */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  /* background: #CCC; */
+  /* border: 2px dashed; */
+  /* padding: 10px; */
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  /* border: 2px dashed; */
+  /* padding: 10px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #CCC; 
+}
+
+/* END SCROLLBAR */

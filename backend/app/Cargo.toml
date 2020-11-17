@@ -1,0 +1,17 @@
+[package]
+name = "app"
+version = "0.2.0"
+authors = ["JADSN <jadsn1894@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+async-std = { version = "1.7.0", features = ["attributes"] }
+
+[dependencies.www]
+path = "../www"
+
+[dependencies.db]
+path = "../db"
+
+[dependencies.error_handling]
+path = "../error_handling"

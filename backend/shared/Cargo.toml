@@ -1,0 +1,12 @@
+[package]
+name = "shared"
+version = "0.2.0"
+authors = ["JADSN <jadsn1894@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+diesel = { version = "1.4.5", features = ["sqlite"] }
+serde = { version = "1.0.117", features = ["derive"]}
+
+[dependencies.auth]
+path = "../auth"

@@ -1,0 +1,3 @@
+[workspace]
+
+members = ['app', 'db', 'www', 'error_handling', 'shared', 'auth', 'validator', 'utils']
